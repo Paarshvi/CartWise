@@ -1,0 +1,314 @@
+{
+  "status": "success",
+  "request_id": "9e13b12d-ea31-4f87-b05c-4e24e63c11f5",
+  "credits_remaining": 99,
+  "data": {
+    "query": "eggs",
+    "platform": "Zepto",
+    "lat": 28.715345,
+    "lon": 77.108801,
+    "total_results": 12,
+    "products": [
+      {
+        "id": "e3e7c06c-fa24-4d90-8458-af1ab2d16efe",
+        "name": "Farm Fresh White Eggs",
+        "brand": "THE EGG CO.",
+        "available": true,
+        "images": [
+          "https://cdn.zeptonow.com/production///tr:w-400,ar-1600-1600,pr-true,f-auto,q-80/cms/product_variant/7e205984-96dc-4c8d-acbd-bd82e678be2b.jpg"
+        ],
+        "mrp": 74,
+        "offer_price": 69,
+        "quantity": "1 pack (6 pcs)",
+        "deeplink": "https://www.zeptonow.com/pn/x/pvid/e3e7c06c-fa24-4d90-8458-af1ab2d16efe",
+        "rating": null,
+        "rating_count": null,
+        "inventory": 1,
+        "is_ad": true,
+        "rank": 1,
+        "platform": {
+          "name": "Zepto",
+          "sla": "19 mins",
+          "open": true,
+          "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/zepto.webp"
+        },
+        "store_id": "b5c0eebd-0709-4d34-9530-d4540f4db62f"
+      },
+      {
+        "id": "de9b277c-1dd0-44b0-a764-8bac9cc75482",
+        "name": "Arora White Eggs",
+        "brand": "Arora Eggs",
+        "available": true,
+        "images": [
+          "https://cdn.zeptonow.com/production///tr:w-400,ar-1600-1600,pr-true,f-auto,q-80/cms/product_variant/73937c36-f487-40bc-905a-8fc0a52093db.png"
+        ],
+        "mrp": 75,
+        "offer_price": 62,
+        "quantity": "1 pack (6 pcs)",
+        "deeplink": "https://www.zeptonow.com/pn/x/pvid/de9b277c-1dd0-44b0-a764-8bac9cc75482",
+        "rating": 4.4,
+        "rating_count": 36699,
+        "inventory": 2,
+        "is_ad": false,
+        "rank": 2,
+        "platform": {
+          "name": "Zepto",
+          "sla": "19 mins",
+          "open": true,
+          "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/zepto.webp"
+        },
+        "store_id": "b5c0eebd-0709-4d34-9530-d4540f4db62f"
+      },
+      {
+        "id": "3815500c-83f0-4ad8-a869-7aa7fe9e4fbe",
+        "name": "Healthy Eggs White",
+        "brand": "UPF",
+        "available": true,
+        "images": [
+          "https://cdn.zeptonow.com/production///tr:w-400,ar-1600-1600,pr-true,f-auto,q-80/cms/product_variant/bb585ee4-7a47-49b9-a99e-d62a5c3a64c9.jpg"
+        ],
+        "mrp": 99,
+        "offer_price": 99,
+        "quantity": "1 pack (6 pcs)",
+        "deeplink": "https://www.zeptonow.com/pn/x/pvid/3815500c-83f0-4ad8-a869-7aa7fe9e4fbe",
+        "rating": 4.4,
+        "rating_count": 6730,
+        "inventory": 1,
+        "is_ad": true,
+        "rank": 3,
+        "platform": {
+          "name": "Zepto",
+          "sla": "19 mins",
+          "open": true,
+          "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/zepto.webp"
+        },
+        "store_id": "b5c0eebd-0709-4d34-9530-d4540f4db62f"
+      },
+      {
+        "id": "3e5b5972-959f-4862-b1f9-b478d4c710a4",
+        "name": "Protein Rich Farm Fresh White Eggs",
+        "brand": "EGGOZ",
+        "available": true,
+        "images": [
+          "https://cdn.zeptonow.com/production///tr:w-400,ar-1600-1600,pr-true,f-auto,q-80/cms/product_variant/83359a86-2026-4560-ba48-6b1f9b42e48e.jpeg"
+        ],
+        "mrp": 170,
+        "offer_price": 144,
+        "quantity": "1 pack (10 pcs)",
+        "deeplink": "https://www.zeptonow.com/pn/x/pvid/3e5b5972-959f-4862-b1f9-b478d4c710a4",
+        "rating": 4.3,
+        "rating_count": 46233,
+        "inventory": 7,
+        "is_ad": false,
+        "rank": 4,
+        "platform": {
+          "name": "Zepto",
+          "sla": "19 mins",
+          "open": true,
+          "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/zepto.webp"
+        },
+        "store_id": "b5c0eebd-0709-4d34-9530-d4540f4db62f"
+      },
+      {
+        "id": "c6896968-1321-4dfc-b5be-b49424eb103b",
+        "name": "The Good Egg Co. Cage Free Eggs",
+        "brand": "UPF",
+        "available": true,
+        "images": [
+          "https://cdn.zeptonow.com/production///tr:w-400,ar-1600-1600,pr-true,f-auto,q-80/cms/product_variant/f39d9586-81a0-4eb7-9028-bd0c372305af.jpg"
+        ],
+        "mrp": 135,
+        "offer_price": 135,
+        "quantity": "1 pack (6 pcs)",
+        "deeplink": "https://www.zeptonow.com/pn/x/pvid/c6896968-1321-4dfc-b5be-b49424eb103b",
+        "rating": 4.2,
+        "rating_count": 6070,
+        "inventory": 3,
+        "is_ad": true,
+        "rank": 5,
+        "platform": {
+          "name": "Zepto",
+          "sla": "19 mins",
+          "open": true,
+          "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/zepto.webp"
+        },
+        "store_id": "b5c0eebd-0709-4d34-9530-d4540f4db62f"
+      },
+      {
+        "id": "c66973d8-66c2-4d14-9b76-20374e38dda3",
+        "name": "Abhi Vitamin D3 White Eggs With Immunity Boosters",
+        "brand": "Abhi Eggs",
+        "available": true,
+        "images": [
+          "https://cdn.zeptonow.com/production///tr:w-400,ar-1600-1600,pr-true,f-auto,q-80/cms/product_variant/a7dfff8f-8183-4bc5-aabe-268d42988810.jpeg"
+        ],
+        "mrp": 110,
+        "offer_price": 90,
+        "quantity": "1 pack (6 pcs)",
+        "deeplink": "https://www.zeptonow.com/pn/x/pvid/c66973d8-66c2-4d14-9b76-20374e38dda3",
+        "rating": 4.6,
+        "rating_count": 39849,
+        "inventory": 4,
+        "is_ad": false,
+        "rank": 6,
+        "platform": {
+          "name": "Zepto",
+          "sla": "19 mins",
+          "open": true,
+          "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/zepto.webp"
+        },
+        "store_id": "b5c0eebd-0709-4d34-9530-d4540f4db62f"
+      },
+      {
+        "id": "edfe97bc-aec9-47ba-a6ab-ecd6ecebf9c0",
+        "name": "Protein Rich Farm Fresh White Eggs",
+        "brand": "EGGOZ",
+        "available": true,
+        "images": [
+          "https://cdn.zeptonow.com/production///tr:w-400,ar-1600-1600,pr-true,f-auto,q-80/cms/product_variant/074a909a-b84b-4a6a-8890-02444669db5e.jpeg"
+        ],
+        "mrp": 109,
+        "offer_price": 89,
+        "quantity": "1 pack (6 pcs)",
+        "deeplink": "https://www.zeptonow.com/pn/x/pvid/edfe97bc-aec9-47ba-a6ab-ecd6ecebf9c0",
+        "rating": 4.3,
+        "rating_count": 13441,
+        "inventory": 5,
+        "is_ad": false,
+        "rank": 7,
+        "platform": {
+          "name": "Zepto",
+          "sla": "19 mins",
+          "open": true,
+          "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/zepto.webp"
+        },
+        "store_id": "b5c0eebd-0709-4d34-9530-d4540f4db62f"
+      },
+      {
+        "id": "ccc7db98-e952-460d-8f34-0b5e5aadea4b",
+        "name": "Gold + Brown Eggs With Immunity Boosters",
+        "brand": "Abhi Eggs",
+        "available": true,
+        "images": [
+          "https://cdn.zeptonow.com/production///tr:w-400,ar-1600-1600,pr-true,f-auto,q-80/cms/product_variant/fab78455-5fd8-45b2-8316-fb168aa68c0a.jpeg"
+        ],
+        "mrp": 120,
+        "offer_price": 108,
+        "quantity": "1 pack (6 pcs)",
+        "deeplink": "https://www.zeptonow.com/pn/x/pvid/ccc7db98-e952-460d-8f34-0b5e5aadea4b",
+        "rating": 4.4,
+        "rating_count": 12076,
+        "inventory": 2,
+        "is_ad": false,
+        "rank": 8,
+        "platform": {
+          "name": "Zepto",
+          "sla": "19 mins",
+          "open": true,
+          "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/zepto.webp"
+        },
+        "store_id": "b5c0eebd-0709-4d34-9530-d4540f4db62f"
+      },
+      {
+        "id": "919c9cd8-8961-41cb-841f-b0bbcdcf6b62",
+        "name": "Protein Rich Farm Fresh White Eggs",
+        "brand": "EGGOZ",
+        "available": true,
+        "images": [
+          "https://cdn.zeptonow.com/production///tr:w-400,ar-1600-1600,pr-true,f-auto,q-80/cms/product_variant/36b63d8a-1d5d-45ac-8110-7e247f086eb4.jpeg"
+        ],
+        "mrp": 479,
+        "offer_price": 386,
+        "quantity": "1 pack (30 pcs)",
+        "deeplink": "https://www.zeptonow.com/pn/x/pvid/919c9cd8-8961-41cb-841f-b0bbcdcf6b62",
+        "rating": 3.9,
+        "rating_count": 19970,
+        "inventory": 3,
+        "is_ad": false,
+        "rank": 9,
+        "platform": {
+          "name": "Zepto",
+          "sla": "19 mins",
+          "open": true,
+          "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/zepto.webp"
+        },
+        "store_id": "b5c0eebd-0709-4d34-9530-d4540f4db62f"
+      },
+      {
+        "id": "d259d494-f6da-43a0-810d-1ea10d6f26ac",
+        "name": "Foods Free Range Eggs",
+        "brand": "Farm Made",
+        "available": true,
+        "images": [
+          "https://cdn.zeptonow.com/production///tr:w-400,ar-1600-1600,pr-true,f-auto,q-80/cms/product_variant/8262448a-aafb-4755-a266-085421923e9a.jpg"
+        ],
+        "mrp": 159,
+        "offer_price": 154,
+        "quantity": "1 pack (6 pcs)",
+        "deeplink": "https://www.zeptonow.com/pn/x/pvid/d259d494-f6da-43a0-810d-1ea10d6f26ac",
+        "rating": 4.3,
+        "rating_count": 12828,
+        "inventory": 2,
+        "is_ad": false,
+        "rank": 10,
+        "platform": {
+          "name": "Zepto",
+          "sla": "19 mins",
+          "open": true,
+          "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/zepto.webp"
+        },
+        "store_id": "b5c0eebd-0709-4d34-9530-d4540f4db62f"
+      },
+      {
+        "id": "9fbab813-461a-4131-aa2b-b680cd6b2e79",
+        "name": "Fresh White Eggs",
+        "brand": "Farm2Home",
+        "available": true,
+        "images": [
+          "https://cdn.zeptonow.com/production///tr:w-400,ar-1600-1600,pr-true,f-auto,q-80/cms/product_variant/07b17065-1bc1-41f4-b1c5-e88a817ec89d.jpg"
+        ],
+        "mrp": 98,
+        "offer_price": 98,
+        "quantity": "1 pack (10 pcs)",
+        "deeplink": "https://www.zeptonow.com/pn/x/pvid/9fbab813-461a-4131-aa2b-b680cd6b2e79",
+        "rating": 4.1,
+        "rating_count": 4472,
+        "inventory": 1,
+        "is_ad": false,
+        "rank": 11,
+        "platform": {
+          "name": "Zepto",
+          "sla": "19 mins",
+          "open": true,
+          "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/zepto.webp"
+        },
+        "store_id": "b5c0eebd-0709-4d34-9530-d4540f4db62f"
+      },
+      {
+        "id": "9ed0af61-ecef-460e-847d-630d609c56a3",
+        "name": "Table white Eggs",
+        "brand": "DR.hen",
+        "available": true,
+        "images": [
+          "https://cdn.zeptonow.com/production///tr:w-400,ar-1600-1600,pr-true,f-auto,q-80/cms/product_variant/12820a61-fdfb-4f6d-9771-91c78df5c441.jpeg"
+        ],
+        "mrp": 85,
+        "offer_price": 66,
+        "quantity": "1 pack (6 pcs)",
+        "deeplink": "https://www.zeptonow.com/pn/x/pvid/9ed0af61-ecef-460e-847d-630d609c56a3",
+        "rating": 3.9,
+        "rating_count": 1836,
+        "inventory": 1,
+        "is_ad": false,
+        "rank": 12,
+        "platform": {
+          "name": "Zepto",
+          "sla": "19 mins",
+          "open": true,
+          "icon": "https://d2chhaxkq6tvay.cloudfront.net/platforms/zepto.webp"
+        },
+        "store_id": "b5c0eebd-0709-4d34-9530-d4540f4db62f"
+      }
+    ]
+  }
+}
