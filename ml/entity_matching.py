@@ -1,3 +1,4 @@
+from rapidfuzz import fuzz
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -44,7 +45,6 @@ def brand_match(brand_1, brand_2):
 
     return int(brand_1 == brand_2)
 
-
 def quantity_match(row_1, row_2):
     if pd.isna(row_1["quantity_value"]) or pd.isna(row_2["quantity_value"]):
         return 0
@@ -53,9 +53,13 @@ def quantity_match(row_1, row_2):
     unit_match = str(row_1["quantity_unit"]).lower() == str(row_2["quantity_unit"]).lower()
     pack_match = float(row_1["pack_count"]) == float(row_2["pack_count"])
 
-    return int(value_match and unit_match and pack_match)
+    if value_match and unit_match and pack_match:
+        return 1
 
+    return -1
 
+def fuzzy_similarity(name_1, name_2):
+    return fuzz.ratio(name_1, name_2) / 100
 # -----------------------------
 # Generate matches
 # -----------------------------
@@ -69,6 +73,10 @@ for i in range(len(df)):
             continue
 
         name_similarity = similarity_matrix[i][j]
+        fuzzy_score = fuzzy_similarity(
+    df.iloc[i]["normalized_name"],
+    df.iloc[j]["normalized_name"]
+)
 
         brand_score = brand_match(
             df.iloc[i]["brand"],
@@ -81,10 +89,19 @@ for i in range(len(df)):
         )
 
         final_score = (
-            0.60 * name_similarity +
-            0.20 * brand_score +
-            0.20 * quantity_score
-        )
+    0.40 * name_similarity +
+    0.20 * fuzzy_score +
+    0.20 * brand_score +
+    0.20 * quantity_score
+)
+        if final_score >= 0.50:
+            print(
+        f"{df.iloc[i]['product_name']} | "
+        f"{df.iloc[i]['platform']}  <->  "
+        f"{df.iloc[j]['product_name']} | "
+        f"{df.iloc[j]['platform']}  | "
+        f"score={final_score:.3f}"
+    )
 
         matches.append({
             "product_1": df.iloc[i]["product_name"],
@@ -92,6 +109,7 @@ for i in range(len(df)):
             "product_2": df.iloc[j]["product_name"],
             "platform_2": df.iloc[j]["platform"],
             "name_similarity": name_similarity,
+            "fuzzy_similarity": fuzzy_score,
             "brand_match": brand_score,
             "quantity_match": quantity_score,
             "final_score": final_score
