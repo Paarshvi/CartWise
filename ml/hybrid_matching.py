@@ -91,8 +91,67 @@ def quantity_match(row_1, row_2):
         return 1
 
     return -1
+def category_similarity(cat_1, subcat_1, cat_2, subcat_2):
+    text_1 = f"{cat_1} {subcat_1}".lower()
+    text_2 = f"{cat_2} {subcat_2}".lower()
 
+    return fuzz.token_set_ratio(text_1, text_2) / 100
 
+def match_products(index_1, index_2):
+    embedding_score = cosine_similarity(
+        embeddings[index_1].reshape(1, -1),
+        embeddings[index_2].reshape(1, -1)
+    )[0][0]
+
+    tfidf_score = cosine_similarity(
+        tfidf_matrix[index_1],
+        tfidf_matrix[index_2]
+    )[0][0]
+
+    fuzzy_score = fuzzy_similarity(
+        df.iloc[index_1]["normalized_name"],
+        df.iloc[index_2]["normalized_name"]
+    )
+
+    brand_score = brand_match(
+        df.iloc[index_1]["brand"],
+        df.iloc[index_2]["brand"]
+    )
+
+    quantity_score = quantity_match(
+        df.iloc[index_1],
+        df.iloc[index_2]
+    )
+
+    category_score = category_similarity(
+        df.iloc[index_1]["category"],
+        df.iloc[index_1]["subcategory"],
+        df.iloc[index_2]["category"],
+        df.iloc[index_2]["subcategory"]
+    )
+
+    final_score = (
+        0.55 * embedding_score +
+        0.20 * tfidf_score +
+        0.10 * fuzzy_score +
+        0.15 * category_score
+    )
+
+    if quantity_score == -1:
+        prediction = 0
+    else:
+        prediction = int(final_score >= 0.70)
+
+    return {
+        "embedding_score": embedding_score,
+        "tfidf_score": tfidf_score,
+        "fuzzy_score": fuzzy_score,
+        "brand_score": brand_score,
+        "quantity_score": quantity_score,
+        "category_score": category_score,
+        "final_score": final_score,
+        "prediction": prediction
+    }
 # -----------------------------
 # Evaluation
 # -----------------------------
@@ -129,45 +188,16 @@ for _, row in eval_df.iterrows():
     index_1 = product_1.index[0]
     index_2 = product_2.index[0]
 
-    # Embedding similarity
-    embedding_score = cosine_similarity(
-        embeddings[index_1].reshape(1, -1),
-        embeddings[index_2].reshape(1, -1)
-    )[0][0]
+    scores = match_products(index_1, index_2)
 
-    # TF-IDF similarity
-    tfidf_score = cosine_similarity(
-        tfidf_matrix[index_1],
-        tfidf_matrix[index_2]
-    )[0][0]
-
-    # Fuzzy similarity
-    fuzzy_score = fuzzy_similarity(
-        df.iloc[index_1]["normalized_name"],
-        df.iloc[index_2]["normalized_name"]
-    )
-
-    # Metadata signals
-    brand_score = brand_match(
-        df.iloc[index_1]["brand"],
-        df.iloc[index_2]["brand"]
-    )
-
-    quantity_score = quantity_match(
-        df.iloc[index_1],
-        df.iloc[index_2]
-    )
-
-    # Hybrid score
-    final_score = (
-    0.60 * embedding_score +
-    0.25 * tfidf_score +
-    0.15 * fuzzy_score
-)
-    if quantity_score == -1:
-        prediction = 0
-    else:
-        prediction = int(final_score >= 0.70)
+    embedding_score = scores["embedding_score"]
+    tfidf_score = scores["tfidf_score"]
+    fuzzy_score = scores["fuzzy_score"]
+    brand_score = scores["brand_score"]
+    quantity_score = scores["quantity_score"]
+    category_score = scores["category_score"]
+    final_score = scores["final_score"]
+    prediction = scores["prediction"]
 
     y_true.append(row["label"])
     y_pred.append(prediction)
@@ -181,6 +211,7 @@ for _, row in eval_df.iterrows():
         f"| tfidf={tfidf_score:.3f} "
         f"| fuzzy={fuzzy_score:.3f} "
         f"| brand={brand_score} "
+        f"| category={category_score:.3f} "
         f"| quantity={quantity_score} "
         f"| final={final_score:.3f} "
         f"| actual={row['label']} "
